@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keziban Karagumus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>SINAV PLATFORMU</h1>
+    </div>
+    <div class="container" >
+        <h2 style="text-align: center;">ÜYE KAYIT PANELİ </h2><br><br>
+        <form method="post" action="/register"  >
+            <div class="form-group">
+                <label for="iladi">İL ADI:</label>
+                <input type="text" id="iladi" name="iladi" required><br>
+                
+                <label for="iladi">KURUM ADI:</label>
+                <input type="text" id="iladi" name="iladi" required><br>
+                
+                <label for="ad">ADINIZ:</label>
+                <input type="text" id="ad" name="ad" required><br>
+
+                <label for="soyad">SOYADINIZ:</label>
+                <input type="text" id="soyad" name="soyad" required><br>
+
+                <label for="id_number">TC:</label>
+                <input type="text" id="id_number" name="id_number" required pattern="\d{11}" title="11 haneli TC Kimlik numarası giriniz."><br>
+
+                <label for="membership_type">ÜYELİK TÜRÜ:</label>
+                <select id="membership_type" name="membership_type" required>
+                <option value="öğretmen">Öğretmen</option>
+                <option value="öğrenci">Öğrenci</option>
+                </select><br>
+
+        
+                <label for="grade_level">SINIF DÜZEYİ:</label>
+                <select id="grade_level" name="grade_level" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">Öğretmen</option>
+                </select><br>
+
+                <label for="email">E-POSTA:</label>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="password">ŞİFRE:</label>
+                <input type="password" id="password" name="password" required><br>
+
+            </div>
+                
+           
+            <button type="submit" >KAYIT OL</button>
+            <p>Zaten bir hesabın var mı? <a href="index.html">Giriş Yap</a></p>
+        </form>
+        
+    </div>
+</body>
+</html>

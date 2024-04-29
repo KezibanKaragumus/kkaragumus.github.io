@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keziban Karagumus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>SINAV PLATFORMU</h1>
+    </div>
+    <div class="container" >
+        <h2 style="text-align: center;">GİRİŞ PANELİ </h2><br><br>
+        <form  action="/ogretmen1.html"  >
+            <div class="form-group">
+
+                <label for="id_number">TC:</label>
+                <input type="text" id="id_number" name="id_number" required pattern="\d{11}" title="11 haneli TC Kimlik numarası giriniz."><br>
+
+                <label for="password">ŞİFRE:</label>
+                <input type="password" id="password" name="password" required><br>
+
+                <label for="membership_type">ÜYELİK TÜRÜ:</label>
+                <select id="membership_type" name="membership_type" required>
+                <option value="öğretmen">Öğretmen</option>
+                <option value="öğrenci">Öğrenci</option>
+                </select><br>
+
+            </div>
+                
+           
+            <button type="submit" >GİRİŞ YAP</button>
+            <p>Hesabın yok mu? <a href="kayit.html">Kayıt Ol</a></p>
+        </form>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+    width: 70%;
+    height: 100%;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.2);
+    font-size: 12px;
+   
+}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Test ve Soru Yönetimi</h1>
+    </div>
+    <div class="container">
+        <!-- Yeni Test Ekleme -->
+        <h2>Yeni Test Ekle</h2>
+        <form id="test-form">
+            <div class="form-group">
+                <label for="test-title">Test Başlığı:</label>
+                <input type="text" id="test-title" name="test-title" required>
+            </div>
+            <div class="form-group">
+                <label for="test-description">Test Açıklaması:</label>
+                <textarea id="test-description" name="test-description" rows="4" required></textarea>
+            </div>
+            <button type="submit">Test Ekle</button>
+        </form>
+        <!-- Yeni Soru Ekleme -->
+        <h2>Yeni Soru Ekle</h2>
+        <form id="question-form">
+            <div class="form-group">
+                <label for="test-select">Test Seç:</label>
+                <select id="test-select" name="test-select" required>
+                    <option value="">Test Seçin</option>
+                    <!-- Mevcut testler burada listelenir -->
+                    <option value="test1">Test 1</option>
+                    <option value="test2">Test 2</option>
+                    <!-- Daha fazla test seçenekleri -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question-text">Soru Metni:</label>
+                <textarea id="question-text" name="question-text" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="question-image">Soru Görseli (isteğe bağlı):</label>
+                <input type="file" id="question-image" name="question-image">
+            </div>
+            <div class="form-group">
+                <label for="option-a">Seçenek A:</label>
+                <input type="text" id="option-a" name="option-a" required>
+            </div>
+            <div class="form-group">
+                <label for="option-b">Seçenek B:</label>
+                <input type="text" id="option-b" name="option-b" required>
+            </div>
+            <div class="form-group">
+                <label for="option-c">Seçenek C:</label>
+                <input type="text" id="option-c" name="option-c" required>
+            </div>
+            <div class="form-group">
+                <label for="option-d">Seçenek D:</label>
+                <input type="text" id="option-d" name="option-d" required>
+            </div>
+            <div class="form-group">
+                <label for="correct-answer">Doğru Cevap:</label>
+                <select id="correct-answer" name="correct-answer" required>
+                    <option value="">Seçenek Seçin</option>
+                    <option value="a">A</option>
+                    <option value="b">B</option>
+                    <option value="c">C</option>
+                    <option value="d">D</option>
+                </select>
+            </div>
+            <button type="submit">Soru Ekle</button>
+        </form>
+        <!-- Soruyu Güncelleme -->
+        <h2>Soruyu Güncelle</h2>
+        <form id="question-update-form">
+            <div class="form-group">
+                <label for="test-select-update">Test Seç:</label>
+                <select id="test-select-update" name="test-select-update" required>
+                    <option value="">Test Seçin</option>
+                    <!-- Mevcut testler burada listelenir -->
+                    <option value="test1">Test 1</option>
+                    <option value="test2">Test 2</option>
+                    <!-- Daha fazla test seçenekleri -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question-select-update">Güncellenecek Soru Seç:</label>
+                <select id="question-select-update" name="question-select-update" required>
+                    <option value="">Soru Seçin</option>
+                    <!-- Mevcut sorular burada listelenir -->
+                    <option value="question1">Soru 1</option>
+                    <option value="question2">Soru 2</option>
+                    <!-- Daha fazla soru seçenekleri -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="updated-question-text">Güncellenmiş Soru Metni:</label>
+                <textarea id="updated-question-text" name="updated-question-text" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="updated-question-image">Güncellenmiş Soru Görseli (isteğe bağlı):</label>
+                <input type="file" id="updated-question-image" name="updated-question-image">
+            </div>
+            <div class="form-group">
+                <label for="updated-option-a">Güncellenmiş Seçenek A:</label>
+                <input type="text" id="updated-option-a" name="updated-option-a">
+            </div>
+            <div class="form-group">
+                <label for="updated-option-b">Güncellenmiş Seçenek B:</label>
+                <input type="text" id="updated-option-b" name="updated-option-b">
+            </div>
+            <div class="form-group">
+                <label for="updated-option-c">Güncellenmiş Seçenek C:</label>
+                <input type="text" id="updated-option-c" name="updated-option-c">
+            </div>
+            <div class="form-group">
+                <label for="updated-option-d">Güncellenmiş Seçenek D:</label>
+                <input type="text" id="updated-option-d" name="updated-option-d">
+            </div>
+            <div class="form-group">
+                <label for="updated-correct-answer">Güncellenmiş Doğru Cevap:</label>
+                <select id="updated-correct-answer" name="updated-correct-answer" required>
+                    <option value="">Seçenek Seçin</option>
+                    <option value="a">A</option>
+                    <option value="b">B</option>
+                    <option value="c">C</option>
+                    <option value="d">D</option>
+                </select>
+            </div>
+            <button type="submit">Soru Güncelle</button>
+        </form>
+        <!-- Soru Pasifleştirme -->
+        <h2>Soruyu Pasifleştir</h2>
+        <form id="question-deactivate-form">
+            <div class="form-group">
+                <label for="test-select-deactivate">Test Seç:</label>
+                <select id="test-select-deactivate" name="test-select-deactivate" required>
+                    <option value="">Test Seçin</option>
+                    <!-- Mevcut testler burada listelenir -->
+                    <option value="test1">Test 1</option>
+                    <option value="test2">Test 2</option>
+                    <!-- Daha fazla test seçenekleri -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question-select-deactivate">Pasifleştirilecek Soru Seç:</label>
+                <select id="question-select-deactivate" name="question-select-deactivate" required>
+                    <option value="">Soru Seçin</option>
+                    <!-- Mevcut sorular burada listelenir -->
+                    <option value="question1">Soru 1</option>
+                    <option value="question2">Soru 2</option>
+                    <!-- Daha fazla soru seçenekleri -->
+                </select>
+            </div>
+            <button type="submit">Soru Pasifleştir</button>
+        </form>
+    </div>
+  
+  
+</body>
+</html>

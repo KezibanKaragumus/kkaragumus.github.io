@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keziban Karagumus</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .test-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+.test-item {
+    position: relative;
+    margin: auto;
+    background-color:rgb(225, 70, 173);
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 75%;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+.test-item:hover {
+    background-color: #3e8e41;
+}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>SINAV PLATFORMU</h1>
+    </div>
+    <div class="container" >
+        <h2 style="text-align: center;">ÖĞRETMEN TEST SEÇİM PANELİ </h2><br><br>
+        <form method="post" action="/register"  >
+            <div class="form-group">
+
+                <div class="test-item" onclick="location.href='test-page.html';">HTML Testi</div><br>
+                <div class="test-item" onclick="location.href='test-page2.html';">CSS Testi</div><br>
+                <div class="test-item" onclick="location.href='test-page.html';">Java Testi</div><br>
+                <div class="test-item" onclick="location.href='test-page.html';">Nesnelerin İnterneti Testi</div><br>
+
+
+            </div>
+                
+           
+            
+            
+        </form>
+        
+    </div>
+</body>
+</html>
